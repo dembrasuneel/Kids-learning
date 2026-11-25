@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_subject"
+    style="@style/Widget.LittleGenius.FlatPastelCard"
+    android:layout_width="168dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/pastel_sky_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <FrameLayout
+            android:id="@+id/icon_container"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_circle_soft">
+
+            <ImageView
+                android:id="@+id/iv_subject_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/cd_subject_icon"
+                tools:src="@drawable/ic_calculate" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_subject_title"
+            style="@style/TextAppearance.LittleGenius.CardTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:textSize="16sp"
+            tools:text="Mathematics" />
+
+        <TextView
+            android:id="@+id/tv_subject_chapters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/lg_on_surface_variant"
+            android:textSize="12sp"
+            tools:text="5 of 9 chapters" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:indicatorColor="@color/lg_primary"
+            app:trackColor="@color/white"
+            app:trackCornerRadius="6dp"
+            app:trackThickness="6dp"
+            tools:progress="60" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

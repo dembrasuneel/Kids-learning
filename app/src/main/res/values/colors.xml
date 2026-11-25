@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand & Material 3 Core Palette -->
+    <color name="lg_primary">#476EFA</color>
+    <color name="lg_on_primary">#FFFFFF</color>
+    <color name="lg_primary_container">#E3EAFF</color>
+    <color name="lg_on_primary_container">#162B75</color>
+
+    <color name="lg_secondary">#FF7A59</color>
+    <color name="lg_on_secondary">#FFFFFF</color>
+    <color name="lg_secondary_container">#FFE7DF</color>
+    <color name="lg_on_secondary_container">#6B2311</color>
+
+    <color name="lg_tertiary">#10B981</color>
+    <color name="lg_on_tertiary">#FFFFFF</color>
+    <color name="lg_tertiary_container">#D7F9EC</color>
+    <color name="lg_on_tertiary_container">#064E3B</color>
+
+    <color name="lg_background">#FBF9F5</color>
+    <color name="lg_on_background">#1F2430</color>
+    <color name="lg_surface">#FFFFFF</color>
+    <color name="lg_on_surface">#1F2430</color>
+    <color name="lg_surface_variant">#F2EFE9</color>
+    <color name="lg_on_surface_variant">#5C6475</color>
+    <color name="lg_outline">#DFD9CE</color>
+
+    <!-- Pastel Subject & Accent Palette -->
+    <color name="pastel_sky_bg">#E6F2FF</color>
+    <color name="pastel_sky_fg">#2563EB</color>
+
+    <color name="pastel_peach_bg">#FFEAE3</color>
+    <color name="pastel_peach_fg">#E05336</color>
+
+    <color name="pastel_mint_bg">#E2F8EE</color>
+    <color name="pastel_mint_fg">#0D9464</color>
+
+    <color name="pastel_lavender_bg">#EFE8FF</color>
+    <color name="pastel_lavender_fg">#6D3DF5</color>
+
+    <color name="pastel_lemon_bg">#FFF5D1</color>
+    <color name="pastel_lemon_fg">#C68400</color>
+
+    <color name="pastel_rose_bg">#FFE6F0</color>
+    <color name="pastel_rose_fg">#D13B74</color>
+
+    <color name="pastel_teal_bg">#E0F7FA</color>
+    <color name="pastel_teal_fg">#008394</color>
+
+    <!-- Gamification Tokens -->
+    <color name="star_gold">#FFB800</color>
+    <color name="streak_flame">#FF6B35</color>
+    <color name="points_purple">#7C4DFF</color>
+    <color name="success_green">#16A34A</color>
+    <color name="error_red">#DC2626</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

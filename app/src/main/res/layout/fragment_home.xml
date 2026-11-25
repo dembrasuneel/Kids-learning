@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lg_background"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="18dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="24dp">
+
+        <!-- 1. Top Student Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_home_avatar"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:clickable="true"
+                android:contentDescription="@string/cd_student_avatar"
+                android:focusable="true"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                app:strokeColor="@color/lg_primary"
+                app:strokeWidth="2dp"
+                tools:src="@drawable/img_avatar_explorer" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_home_greeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="13sp"
+                    tools:text="Good Morning," />
+
+                <TextView
+                    android:id="@+id/tv_home_student_name"
+                    style="@style/TextAppearance.LittleGenius.Display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    tools:text="Ayan" />
+            </LinearLayout>
+
+            <!-- Sound TTS Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_speak_welcome"
+                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/cd_speak_greeting"
+                app:backgroundTint="@color/pastel_sky_bg"
+                app:icon="@drawable/ic_volume_up"
+                app:iconTint="@color/pastel_sky_fg" />
+
+            <!-- Parent Gate Lock Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_parent_zone"
+                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/cd_parent_zone"
+                app:backgroundTint="@color/pastel_lavender_bg"
+                app:icon="@drawable/ic_lock"
+                app:iconTint="@color/pastel_lavender_fg" />
+        </LinearLayout>
+
+        <!-- Active Class Pill & Quick Stats Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_class_selector"
+                style="@style/Widget.Material3.Chip.Assist.Elevated"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:textColor="@color/lg_on_primary_container"
+                app:chipBackgroundColor="@color/lg_primary_container"
+                app:chipCornerRadius="24dp"
+                app:chipIcon="@drawable/ic_school"
+                app:chipIconTint="@color/lg_primary"
+                app:chipStrokeWidth="0dp"
+                tools:text="Class 1" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!-- Stars Pill -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_pill_rounded"
+                android:backgroundTint="@color/pastel_lemon_bg"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_star"
+                    app:tint="@color/star_gold" />
+
+                <TextView
+                    android:id="@+id/tv_home_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/pastel_lemon_fg"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="24" />
+            </LinearLayout>
+
+            <!-- Streak Pill -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_pill_rounded"
+                android:backgroundTint="@color/pastel_peach_bg"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_flame"
+                    app:tint="@color/streak_flame" />
+
+                <TextView
+                    android:id="@+id/tv_home_streak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/pastel_peach_fg"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="5d" />
+            </LinearLayout>
+
+            <!-- Points Pill -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_pill_rounded"
+                android:backgroundTint="@color/pastel_lavender_bg"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_bolt"
+                    app:tint="@color/points_purple" />
+
+                <TextView
+                    android:id="@+id/tv_home_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/pastel_lavender_fg"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="340" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 2. Continue Learning Hero Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_continue_learning"
+            style="@style/Widget.LittleGenius.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/lg_surface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_hero_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="148dp"
+                    android:contentDescription="@string/cd_hero_banner"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_hero_learning" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_continue_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_pill_rounded"
+                            android:backgroundTint="@color/lg_primary_container"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="@string/dashboard_continue_learning"
+                            android:textColor="@color/lg_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/tv_continue_subject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/lg_on_surface_variant"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            tools:text="Mathematics" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_continue_lesson"
+                        style="@style/TextAppearance.LittleGenius.SectionTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textSize="20sp"
+                        tools:text="Fun with Number Bonds" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/progress_continue_lesson"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:indicatorColor="@color/lg_tertiary"
+                            app:trackColor="@color/lg_surface_variant"
+                            app:trackCornerRadius="8dp"
+                            app:trackThickness="8dp"
+                            tools:progress="65" />
+
+                        <TextView
+                            android:id="@+id/tv_continue_percent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/lg_tertiary"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            tools:text="65%" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_continue_learning"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/dashboard_continue_cta"
+                        android:textSize="15sp"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/ic_arrow_forward"
+                        app:iconGravity="textEnd" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 3. Daily Learning Target Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.LittleGenius.FlatPastelCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="@color/pastel_mint_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearance.LittleGenius.CardTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/dashboard_daily_target_title"
+                        android:textColor="@color/lg_on_tertiary_container"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_daily_target_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/pastel_mint_fg"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="14 / 20 mins" />
+                </LinearLayout>
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progress_daily_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:indicatorColor="@color/lg_tertiary"
+                    app:trackColor="@color/white"
+                    app:trackCornerRadius="8dp"
+                    app:trackThickness="10dp"
+                    tools:progress="70" />
+
+                <TextView
+                    android:id="@+id/tv_daily_target_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/lg_on_tertiary_container"
+                    android:textSize="13sp"
+                    tools:text="Just 6 more minutes to hit today's goal!" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 4. My Subjects Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_subjects_header"
+                style="@style/TextAppearance.LittleGenius.SectionTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dashboard_subjects_title"
+                android:textSize="19sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_see_all_subjects"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/dashboard_see_all" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_dashboard_subjects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_subject_card" />
+
+        <!-- 5. Play & Practice Quick Actions (Daily Quiz & Brain Games) -->
+        <TextView
+            style="@style/TextAppearance.LittleGenius.SectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/dashboard_quick_actions"
+            android:textSize="19sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <!-- Daily Quiz Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_daily_quiz"
+                style="@style/Widget.LittleGenius.FlatPastelCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/pastel_peach_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="128dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <FrameLayout
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/bg_circle_soft">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_quiz"
+                            app:tint="@color/pastel_peach_fg" />
+                    </FrameLayout>
+
+                    <TextView
+                        style="@style/TextAppearance.LittleGenius.CardTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/dashboard_daily_quiz_title"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/dashboard_daily_quiz_subtitle"
+                        android:textColor="@color/lg_on_surface_variant"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Educational Games Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_educational_games"
+                style="@style/Widget.LittleGenius.FlatPastelCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/pastel_lavender_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="128dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <FrameLayout
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/bg_circle_soft">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_nav_games"
+                            app:tint="@color/pastel_lavender_fg" />
+                    </FrameLayout>
+
+                    <TextView
+                        style="@style/TextAppearance.LittleGenius.CardTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/dashboard_games_title"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/dashboard_games_subtitle"
+                        android:textColor="@color/lg_on_surface_variant"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- 6. Weekly Performance Summary -->
+        <include
+            android:id="@+id/include_weekly_chart"
+            layout="@layout/layout_weekly_chart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <!-- 7. Achievements & Rewards Preview -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_home_rewards"
+            style="@style/Widget.LittleGenius.FlatPastelCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/pastel_lemon_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="82dp"
+                    android:layout_height="68dp"
+                    android:contentDescription="@string/cd_trophy_illustration"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_trophy_celebration"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextAppearance.LittleGenius.CardTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dashboard_rewards_title"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_home_badges_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/lg_on_surface_variant"
+                        android:textSize="13sp"
+                        tools:text="2 of 4 badges unlocked • Keep shining!" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/dashboard_rewards_cta"
+                        android:textColor="@color/pastel_lemon_fg"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

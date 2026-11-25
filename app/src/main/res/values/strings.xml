@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Little Genius</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_learn">Learn</string>
+    <string name="nav_games">Games</string>
+    <string name="nav_progress">Progress</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_greeting_morning">Good Morning,</string>
+    <string name="dashboard_greeting_afternoon">Good Afternoon,</string>
+    <string name="dashboard_greeting_evening">Good Evening,</string>
+    <string name="dashboard_daily_target_title">Daily Learning Target</string>
+    <string name="dashboard_continue_learning">Continue Learning</string>
+    <string name="dashboard_continue_cta">Resume Lesson</string>
+    <string name="dashboard_subjects_title">My Subjects</string>
+    <string name="dashboard_see_all">See All</string>
+    <string name="dashboard_quick_actions">Play &amp; Practice</string>
+    <string name="dashboard_daily_quiz_title">Daily Quiz</string>
+    <string name="dashboard_daily_quiz_subtitle">Win +15 pts &amp; a star</string>
+    <string name="dashboard_games_title">Brain Games</string>
+    <string name="dashboard_games_subtitle">Puzzles &amp; math fun</string>
+    <string name="dashboard_weekly_title">Weekly Performance</string>
+    <string name="dashboard_rewards_title">Achievements &amp; Rewards</string>
+    <string name="dashboard_rewards_cta">View All Badges</string>
+
+    <!-- Labels & Accessibility -->
+    <string name="cd_student_avatar">Student profile avatar</string>
+    <string name="cd_speak_greeting">Read welcome message aloud</string>
+    <string name="cd_parent_zone">Open Parent Dashboard</string>
+    <string name="cd_hero_banner">Little Genius learning adventure banner</string>
+    <string name="cd_trophy_illustration">Rewards trophy celebration</string>
+    <string name="cd_subject_icon">Subject icon</string>
+    <string name="cd_badge_icon">Achievement badge icon</string>
+
+    <!-- Class Selector -->
+    <string name="select_class_title">Choose Your Class</string>
+    <string name="select_class_subtitle">Curriculum &amp; subjects adapt automatically</string>
+
+    <!-- Learn -->
+    <string name="learn_title">Explore Subjects</string>
+    <string name="learn_search_hint">Search subjects or topics...</string>
+    <string name="learn_filter_all">All</string>
+    <string name="learn_filter_languages">Languages</string>
+    <string name="learn_filter_stem">Math &amp; Science</string>
+    <string name="learn_filter_gk">GK &amp; Values</string>
+    <string name="learn_empty_title">No subjects match your search</string>
+    <string name="learn_empty_subtitle">Try clearing the filter or searching another word.</string>
+    <string name="listen_aloud">Listen Aloud</string>
+
+    <!-- Games -->
+    <string name="games_title">Educational Games</string>
+    <string name="games_subtitle">Fun challenges tailored for your class</string>
+    <string name="games_warmup_title">Daily Brain Warmup</string>
+    <string name="games_warmup_cta">Play Quick Quiz</string>
+
+    <!-- Progress -->
+    <string name="progress_title">My Progress</string>
+    <string name="progress_badges_title">Achievement Badges</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Student Profile</string>
+    <string name="profile_name_hint">Student Name</string>
+    <string name="profile_save_name">Save Name</string>
+    <string name="profile_avatar_title">Choose Avatar</string>
+    <string name="profile_class_title">Active Class</string>
+    <string name="profile_voice_title">Voice Pronunciation (TTS)</string>
+    <string name="profile_voice_subtitle">Read greetings and words aloud</string>
+    <string name="profile_parent_zone_title">Parent Dashboard</string>
+    <string name="profile_parent_zone_subtitle">Protected by parent math gate</string>
+    <string name="profile_open_parent">Open</string>
+
+    <!-- Parent Gate & Dashboard -->
+    <string name="parent_gate_title">Parent Verification</string>
+    <string name="parent_gate_subtitle">Please solve this quick question to enter Parent Zone:</string>
+    <string name="parent_gate_hint">Enter answer</string>
+    <string name="parent_gate_unlock">Unlock</string>
+    <string name="parent_gate_cancel">Cancel</string>
+    <string name="parent_gate_wrong">Oops! That answer is not right. Try again.</string>
+    <string name="parent_dashboard_title">Parent Dashboard</string>
+    <string name="parent_daily_goal_label">Daily Study Goal (Minutes)</string>
+    <string name="parent_curriculum_label">Curriculum Track</string>
+    <string name="parent_weak_topics_title">Recommended Focus Areas</string>
+    <string name="parent_subject_perf_title">Subject-wise Performance</string>
+
+    <!-- Quiz Dialog -->
+    <string name="quiz_submit">Check Answer</string>
+    <string name="quiz_close">Done</string>
+    <string name="quiz_correct">Awesome! +15 Points and +1 Star earned!</string>
+    <string name="quiz_wrong">Nice try! Give it another thought.</string>
+</resources>

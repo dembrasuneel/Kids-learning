@@ -1,0 +1,6 @@
+{
+  "name": "Little Genius",
+  "description": "Offline-first kids learning app covering Prep 1 to Class 6 with interactive subjects, games, quizzes, rewards, and parent progress reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.LittleGenius.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.LittleGenius.CardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dashboard_weekly_title"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_weekly_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="13sp"
+                    tools:text="126 mins learned this week" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_weekly_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pill_rounded"
+                android:backgroundTint="@color/pastel_mint_bg"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:textColor="@color/pastel_mint_fg"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="On Track" />
+        </LinearLayout>
+
+        <!-- 7-Day Bar Chart -->
+        <LinearLayout
+            android:id="@+id/chart_bars_container"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="16dp"
+            android:baselineAligned="false"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <!-- Mon -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_bar_val_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="11sp"
+                    tools:text="15" />
+                <View
+                    android:id="@+id/bar_day_0"
+                    android:layout_width="18dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_bar_pill"
+                    android:backgroundTint="@color/lg_primary_container" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Mon"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Tue -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_bar_val_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="11sp"
+                    tools:text="22" />
+                <View
+                    android:id="@+id/bar_day_1"
+                    android:layout_width="18dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_bar_pill"
+                    android:backgroundTint="@color/lg_primary_container" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Tue"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Wed -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_bar_val_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="11sp"
+                    tools:text="18" />
+                <View
+                    android:id="@+id/bar_day_2"
+                    android:layout_width="18dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_bar_pill"
+                    android:backgroundTint="@color/lg_primary_container" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Wed"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Thu -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_bar_val_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="11sp"
+                    tools:text="25" />
+                <View
+                    android:id="@+id/bar_day_3"
+                    android:layout_width="18dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_bar_pill"
+                    android:backgroundTint="@color/lg_primary_container" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Thu"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Fri -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_bar_val_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="11sp"
+                    tools:text="20" />
+                <View
+                    android:id="@+id/bar_day_4"
+                    android:layout_width="18dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_bar_pill"
+                    android:backgroundTint="@color/lg_primary_container" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Fri"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Sat -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_bar_val_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="11sp"
+                    tools:text="12" />
+                <View
+                    android:id="@+id/bar_day_5"
+                    android:layout_width="18dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_bar_pill"
+                    android:backgroundTint="@color/lg_primary_container" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Sat"
+                    android:textColor="@color/lg_on_surface_variant"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Today (Sun) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_bar_val_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lg_primary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    tools:text="14" />
+                <View
+                    android:id="@+id/bar_day_6"
+                    android:layout_width="18dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_bar_pill"
+                    android:backgroundTint="@color/lg_primary" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Today"
+                    android:textColor="@color/lg_primary"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LittleGenius" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/lg_primary</item>
+        <item name="colorOnPrimary">@color/lg_on_primary</item>
+        <item name="colorPrimaryContainer">@color/lg_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/lg_on_primary_container</item>
+
+        <item name="colorSecondary">@color/lg_secondary</item>
+        <item name="colorOnSecondary">@color/lg_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/lg_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/lg_on_secondary_container</item>
+
+        <item name="colorTertiary">@color/lg_tertiary</item>
+        <item name="colorOnTertiary">@color/lg_on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/lg_tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/lg_on_tertiary_container</item>
+
+        <item name="android:colorBackground">@color/lg_background</item>
+        <item name="colorSurface">@color/lg_surface</item>
+        <item name="colorOnSurface">@color/lg_on_surface</item>
+        <item name="colorSurfaceVariant">@color/lg_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/lg_on_surface_variant</item>
+        <item name="colorOutline">@color/lg_outline</item>
+
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="fontFamily">@font/nunito</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="TextAppearance.LittleGenius.Display" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/fredoka</item>
+        <item name="android:fontFamily">@font/fredoka</item>
+        <item name="android:textColor">@color/lg_on_background</item>
+    </style>
+
+    <style name="TextAppearance.LittleGenius.SectionTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/fredoka</item>
+        <item name="android:fontFamily">@font/fredoka</item>
+        <item name="android:textColor">@color/lg_on_background</item>
+    </style>
+
+    <style name="TextAppearance.LittleGenius.CardTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/fredoka</item>
+        <item name="android:fontFamily">@font/fredoka</item>
+        <item name="android:textColor">@color/lg_on_surface</item>
+    </style>
+
+    <style name="TextAppearance.LittleGenius.UrduSample" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/noto_naskh_arabic</item>
+        <item name="android:fontFamily">@font/noto_naskh_arabic</item>
+        <item name="android:textColor">@color/lg_on_surface</item>
+    </style>
+
+    <style name="Widget.LittleGenius.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">22dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/lg_outline</item>
+        <item name="cardBackgroundColor">@color/lg_surface</item>
+    </style>
+
+    <style name="Widget.LittleGenius.FlatPastelCard" parent="Widget.Material3.CardView.Filled">
+        <item name="cardCornerRadius">22dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="Widget.LittleGenius.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemActiveIndicatorStyle">@style/Widget.LittleGenius.BottomNav.Indicator</item>
+        <item name="itemIconTint">@color/bottom_nav_item_color</item>
+        <item name="itemTextColor">@color/bottom_nav_item_color</item>
+        <item name="backgroundTint">@color/lg_surface</item>
+    </style>
+
+    <style name="Widget.LittleGenius.BottomNav.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/lg_primary_container</item>
+    </style>
+</resources>
